@@ -13,7 +13,7 @@ nytimes:
 openlibrary:
   api:
     url: https://openlibrary.org/isbn/%s.json
-exception-handling-strategy: detailed
+exception-handling-strategy: limited
 security:
   credentials:
     - username: user0
