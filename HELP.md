@@ -44,9 +44,6 @@ Access to the API endpoints requires basic authentication. Users need to provide
 2. Provide the following credentials:
     - Username: `your-username`
     - Password: `your-password`
-3. For example, using cURL:
-   ```bash
-   curl -X GET http://localhost:8080/me/books/list -u your-username:your-password
 ## User Authentication and Access Control
 
 To interact with the API endpoints, user authentication is required. Users are assigned roles that determine their level of access to the API resources.
