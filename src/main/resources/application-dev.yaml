@@ -1,0 +1,42 @@
+caches:
+  caffeines:
+    - name: getBooksByAuthor
+      expiryInMinutes: 3
+    - name: getPublishYearByIsbn
+      expiryInMinutes: 10000
+nytimes:
+  api:
+    scheme: https
+    host: api.nytimes.com
+    path: svc/books/v3/lists/best-sellers/history.json
+    key: 8CJQTbRY1xySMoh40hGLvEggz3dJfLig
+openlibrary:
+  api:
+    url: https://openlibrary.org/isbn/%s.json
+exception-handling-strategy: detailed
+security:
+  credentials:
+    - username: user0
+      password: 123
+      roles: admin
+    - username: user1
+      password: 123
+      roles: operator1
+    - username: user2
+      password: 123
+      roles: viewer
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Expose all Actuator endpoints
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true  # Enable metrics endpoint
+  metrics:
+    export:
+      prometheus:
+        enabled: true  # Enable exporting metrics to Prometheus
