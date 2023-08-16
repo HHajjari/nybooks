@@ -26,7 +26,7 @@ public class BookController {
      * Endpoint for searching and retrieving books based on author and year.
      *
      * @param bookRequestDto The request parameters.
-     * @return A BookResponseDto containing book information.
+     * @return A BookDto containing book information.
      */
     @GetMapping(ME_BOOKS_LIST)
     public Set<BookDto> searchBooks(@Valid BookRequestDto bookRequestDto) {
